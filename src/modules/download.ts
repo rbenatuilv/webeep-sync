@@ -351,6 +351,8 @@ export class DownloadManager extends EventEmitter {
     // honestly, this takes around 20ms total, it's not even worth to do in parallel
     for (const files of courseFiles)
       for (const file of files) {
+        
+
         const fullpath = path.join(file.filepath, file.filename)
         const absolutePath = path.join(downloadPath, fullpath)
 

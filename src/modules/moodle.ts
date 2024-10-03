@@ -290,6 +290,8 @@ export class MoodleClient extends EventEmitter {
    * @returns a promise that resolve to an array with all the FileInfo objects
    */
   async getFileInfos(course: Course): Promise<FileInfo[]> {
+    const onlyPdf = store.data.settings.onlyPdf
+
     const contents: Contents = await this.call(
       "core_course_get_contents",
       { courseid: course.id },
@@ -307,6 +309,10 @@ export class MoodleClient extends EventEmitter {
 
         for (const file of contents) {
           if (file.type !== "file") continue // only add files to the download (duh)
+
+          // Check if only PDF files should be downloaded
+          
+          if (onlyPdf && path.extname(file.filename).toLowerCase() !== ".pdf") continue
 
           let {
             filename,

@@ -85,6 +85,8 @@
     "msgNotifications": "Mandami una notifica quando ricevo un messaggio su WeBeep",
     "newCourses": "Sincronizza nuovi corsi",
     "newCourses_desc": "Quando nuovi corsi vengono trovati, verranno aggiunti automaticamente alla lista dei corsi che verranno sincronizzati",
+    "onlyPdf": "Scarica solo i PDF",
+    "onlyPdf_desc": "Se abilitato, verranno scaricati solo i file PDF. Se disabilitato, verranno scaricati tutti i file",
     "concurrentDownloads": "Download contemporanei",
     "concurrentDownloads_desc": "Un numero più alto di download contemporanei può aumentare la velocità di download, ma rischia di occupare più banda. Si consiglia un numero più basso per connessioni più lente.",
     "logout": "Log out",
